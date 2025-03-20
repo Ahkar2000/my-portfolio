@@ -19,10 +19,10 @@
                         I am a passionate software engineer with about 3 years of experience. My main tech stack are Java, Spring Boot and Vue Js.
                     </p>
                     <div class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">
-                        <button class="px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
+                        <button href="tel:+959784503574" class="px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
                             <span class="absolute inset-0 rounded-3xl group-hover:scale-105 origin-center transition-all ease-in-out bg-primary
                             border-2 border-transparent"></span>
-                            <span href="tel:+959784503574" class="relative flex items-center justify-center text-white">Hire Me</span>
+                            <span class="relative flex items-center justify-center text-white">Hire Me</span>
                         </button>
                         <button class=" border border-primary px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
                             <div class="hover:scale-105 transition-all ease-in-out flex justify-center items-center relative">
