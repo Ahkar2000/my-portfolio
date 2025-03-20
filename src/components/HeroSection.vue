@@ -8,10 +8,11 @@
             <div class="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto">
                 <div class="lg:py-6">
                     <div class="text-center lg:text-left">
-                        <h1 class="pt-4 text-white font-bold text-4xl md:text-5xl lg:text-5xl">
+                        <h1 class="typing-effect pt-4 text-white font-bold text-4xl md:text-5xl lg:text-5xl">
                             Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500">
                                 Ahkar Min Htut
-                            </span>😁
+                            </span>
+                            <span style="font-size: 0.8em;">😁</span>
                         </h1>
                     </div>
                     <p class="text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-xl">
@@ -56,8 +57,28 @@
         </div>
     </section>
 </template>
-<script setup>
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
-</script>
+
+<style scoped>
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    60% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 3px solid #fff;
+    animation: typing 5s steps(40) infinite;
+}
+</style>
