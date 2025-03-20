@@ -2,13 +2,7 @@
     <section class="text-white mt-20" id="projects">
         <div class="px-4 xl:pl-16">
             <div class="mb-4 md:flex md:justify-between xl:pr-16">
-                <h2 class="text-4xl font-bold text-white"> My Latest Projects</h2>
-                <div class="flex space-x-4 mb-4 mt-5 md:mt-0">
-                    <button class="hover:text-primary" v-for="category in ['all', 'web development', 'Mobile App']"
-                        :key="category" @click="() => selectedCategory = category">
-                        {{ category }}
-                    </button>
-                </div>
+                <h2 class="text-4xl font-bold text-white"> My Projects</h2>
             </div>
             <ul class="px-4 sm:py-16 xl:pr-16 grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3"
                 data-aos="fade-right">
@@ -19,7 +13,7 @@
                     hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500
                     ">
                         <a class="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
-                            :href="project.webURL"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            :href="project.gitURL"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"
                                 data-slot="icon"
                                 class="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white">
@@ -28,7 +22,7 @@
                                 </path>
                             </svg></a><a
                             class="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
-                            :href="project.gitURL"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            :href="project.webURL"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"
                                 data-slot="icon"
                                 class="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white">
@@ -63,62 +57,32 @@ const Projects = ref([
     {
         id: 1,
         category: 'web development',
-        image: 'src/assets/project.png',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur quasi ipsam labore sapiente, accusamus necessitatibus laboriosam non voluptas inventore deserunt dolore modi ex, praesentium at provident nihil magni ratione!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
-        gitURL: '',
-        webURL: ''
+        image: 'src/assets/project1.PNG',
+        title: 'Admin Dashboard',
+        description: 'Just an Admin Dashboard UI project',
+        technologies: ['HTML','CSS', 'Bootstrap','jQuery','JavaScript'],
+        gitURL: 'https://github.com/Ahkar2000/admindashboard',
+        webURL: 'https://admindashboard-nu-rouge.vercel.app/dashboard.html'
     },
     {
         id: 2,
-        category: 'Mobile App',
-        image: 'src/assets/mobile.jpg',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur quasi ipsam labore sapiente, accusamus necessitatibus laboriosam non voluptas inventore deserunt dolore modi ex, praesentium at provident nihil magni ratione!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
-        gitURL: '',
-        webURL: ''
+        category: 'web development',
+        image: 'src/assets/project2.PNG',
+        title: 'Profile Website',
+        description: 'Just a landing page UI project',
+        technologies: ['HTML','CSS','Bootstrap','JavaScript'],
+        gitURL: 'https://github.com/Ahkar2000/profilewebsite',
+        webURL: 'https://profilewebsite.vercel.app/'
     },
     {
         id: 3,
         category: 'web development',
-        image: 'src/assets/project.png',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur quasi ipsam labore sapiente, accusamus necessitatibus laboriosam non voluptas inventore deserunt dolore modi ex, praesentium at provident nihil magni ratione!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
-        gitURL: '',
-        webURL: ''
-    },
-    {
-        id: 4,
-        category: 'Mobile App',
-        image: 'src/assets/mobile.jpg',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur quasi ipsam labore sapiente, accusamus necessitatibus laboriosam non voluptas inventore deserunt dolore modi ex, praesentium at provident nihil magni ratione!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
-        gitURL: '',
-        webURL: ''
-    },
-    {
-        id: 5,
-        category: 'web development',
-        image: 'src/assets/project.png',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur quasi ipsam labore sapiente, accusamus necessitatibus laboriosam non voluptas inventore deserunt dolore modi ex, praesentium at provident nihil magni ratione!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
-        gitURL: '',
-        webURL: ''
-    },
-    {
-        id: 6,
-        category: 'Mobile App',
-        image: 'src/assets/mobile.jpg',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur quasi ipsam labore sapiente, accusamus necessitatibus laboriosam non voluptas inventore deserunt dolore modi ex, praesentium at provident nihil magni ratione!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
-        gitURL: '',
-        webURL: ''
+        image: 'src/assets/project3.PNG',
+        title: 'Burger Website',
+        description: 'Just a landing page UI project',
+        technologies: ['HTML','CSS','Bootstrap','JavaScript'],
+        gitURL: 'https://github.com/Ahkar2000/burger_website',
+        webURL: 'https://burger-website-seven.vercel.app/'
     }
 ]);
 
