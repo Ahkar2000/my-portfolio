@@ -91,18 +91,18 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 
-// Experience stats with animation
 const experienceYears = ref(0);
 const projectsCount = ref(0);
 const clientsCount = ref(0);
+const hasAnimated = ref(false);
 
 const animateCount = (target, stateRef, speed = 50) => {
   let count = 0;
   const interval = setInterval(() => {
     if (count >= target) {
-      stateRef.value = target; // Ensure it reaches the final value
+      stateRef.value = target;
       clearInterval(interval);
     } else {
       count += 1;
@@ -111,10 +111,25 @@ const animateCount = (target, stateRef, speed = 50) => {
   }, speed);
 };
 
+const onScrollIntoView = (entries) => {
+  const entry = entries[0];
+  if (entry.isIntersecting && !hasAnimated.value) {
+    animateCount(3, experienceYears, 70);
+    animateCount(20, projectsCount, 70);
+    animateCount(10, clientsCount, 70);
+    hasAnimated.value = true;
+  }
+};
+
 onMounted(() => {
-  animateCount(3, experienceYears, 100);
-  animateCount(20, projectsCount, 100);
-  animateCount(10, clientsCount, 100);
+  nextTick(() => {
+    const observer = new IntersectionObserver(onScrollIntoView, {
+      threshold: 0.5,
+    });
+
+    const aboutSection = document.getElementById("about");
+    observer.observe(aboutSection);
+  });
 });
 
 const education = ref([
