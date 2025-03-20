@@ -38,7 +38,7 @@
                         </div>
                         <div class="ml-5 text-white">
                             <h4>LinkedIn</h4>
-                            <p>wwww.LinkedIn.com</p>
+                            <p>https://www.linkedin.com/in/ahkar-min-htut-aaba63178/</p>
                         </div>
                     </div>
                 </div>
